@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PXLHDVP | Sacred Geometry &amp; Cosmic Art</title>
+    <meta name="description" content="Unique designs where urban fashion intersects with sacred geometry and the boundless cosmos. Shop stickers, clothing, wall art and more.">
+    <link rel="canonical" href="https://pxlhdvp.com.au">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon/PXLHDVP-favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon/PXLHDVP-favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/assets/favicon/PXLHDVP-favicon-128x128.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="/assets/favicon/PXLHDVP-favicon-256x256.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="PXLHDVP | Sacred Geometry &amp; Cosmic Art">
+    <meta property="og:description" content="Unique designs where urban fashion intersects with sacred geometry and the boundless cosmos.">
+    <meta property="og:image" content="https://pxlhdvp.com.au/assets/og/PXLHDVP-Logo-full-1200x630.png">
+    <meta property="og:url" content="https://pxlhdvp.com.au">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PXLHDVP | Sacred Geometry &amp; Cosmic Art">
+    <meta name="twitter:description" content="Unique designs where urban fashion intersects with sacred geometry and the boundless cosmos.">
+    <meta name="twitter:image" content="https://pxlhdvp.com.au/assets/og/PXLHDVP-Logo-full-1200x630.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=Space+Grotesk:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7B2CBF;
+            --secondary: #E0AAFF;
+            --accent: #00F5D4;
+            --dark: #0D0221;
+            --darker: #060111;
+            --text: #E8E8E8;
+            --text-dim: #9D9D9D;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--darker);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .bg-animation {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(123, 44, 191, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(0, 245, 212, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(224, 170, 255, 0.05) 0%, transparent 70%),
+                var(--darker);
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.2), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.4), transparent),
+                radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.2), transparent),
+                radial-gradient(1px 1px at 160px 120px, rgba(255,255,255,0.3), transparent);
+            background-size: 200px 200px;
+            animation: twinkle 4s ease-in-out infinite;
+        }
+        
+        @keyframes twinkle { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(3rem, 12vw, 8rem);
+            font-weight: 900;
+            letter-spacing: 0.2em;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(123, 44, 191, 0.5)); }
+            to { filter: drop-shadow(0 0 40px rgba(0, 245, 212, 0.5)); }
+        }
+        
+        .tagline {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: var(--text-dim);
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 50px;
+        }
+        
+        .tagline span { color: var(--accent); }
+        
+        .geometry { position: absolute; opacity: 0.1; pointer-events: none; }
+        
+        .geometry-1 {
+            top: 10%; left: 5%;
+            width: 200px; height: 200px;
+            border: 2px solid var(--secondary);
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+        }
+        
+        .geometry-2 {
+            bottom: 15%; right: 10%;
+            width: 150px; height: 150px;
+            border: 2px solid var(--accent);
+            transform: rotate(45deg);
+            animation: rotate 15s linear infinite reverse;
+        }
+        
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        
+        .cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 40px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #9D4EDD);
+            color: white;
+            border: none;
+            box-shadow: 0 10px 40px rgba(123, 44, 191, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(123, 44, 191, 0.6);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: var(--darker);
+            transform: translateY(-3px);
+        }
+        
+        .features { padding: 80px 20px; text-align: center; }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .feature {
+            padding: 30px;
+            background: rgba(123, 44, 191, 0.1);
+            border: 1px solid rgba(224, 170, 255, 0.1);
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .feature h3 { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; color: var(--secondary); margin-bottom: 10px; }
+        .feature p { color: var(--text-dim); font-size: 0.95rem; line-height: 1.5; }
+        
+        .social { padding: 60px 20px; text-align: center; }
+        .social-title { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: var(--text-dim); margin-bottom: 30px; letter-spacing: 0.2em; }
+        .social-links { display: flex; justify-content: center; gap: 30px; }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px; height: 60px;
+            border: 2px solid rgba(224, 170, 255, 0.3);
+            border-radius: 50%;
+            color: var(--secondary);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover { border-color: var(--accent); color: var(--accent); transform: scale(1.1); }
+        
+        footer { padding: 40px 20px; text-align: center; border-top: 1px solid rgba(224, 170, 255, 0.1); }
+        footer p { color: var(--text-dim); font-size: 0.9rem; }
+        footer span { color: var(--accent); }
+        
+        @media (max-width: 600px) {
+            .cta-group { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 300px; justify-content: center; }
+            .social-links { gap: 15px; }
+            .social-link { width: 50px; height: 50px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="stars"></div>
+    <div class="geometry geometry-1"></div>
+    <div class="geometry geometry-2"></div>
+    
+    <section class="hero">
+        <h1 class="logo">PXLHDVP</h1>
+        <p class="tagline">
+            Where <span>urban fashion</span> intersects with the mysteries of 
+            <span>sacred geometry</span> and the boundless <span>cosmos</span>.
+        </p>
+        <div class="cta-group">
+            <a href="https://www.redbubble.com/people/PXLHDVP/shop" class="btn btn-primary" target="_blank" rel="noopener">🛒 Shop Designs</a>
+            <a href="https://au.pinterest.com/PXLHDVP/" class="btn btn-secondary" target="_blank" rel="noopener">📌 Pinterest</a>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">🌌</div>
+                <h3>Cosmic Themes</h3>
+                <p>Black holes, nebulae, and celestial wonders brought to life in wearable art.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⬡</div>
+                <h3>Sacred Geometry</h3>
+                <p>Ancient patterns and mathematical beauty woven into modern designs.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🕹️</div>
+                <h3>Retro Arcade</h3>
+                <p>Nostalgic pixel art meets contemporary urban street style.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>55+ Designs</h3>
+                <p>Stickers, clothing, phone cases, wall art, and home décor.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="social">
+        <p class="social-title">CONNECT</p>
+        <div class="social-links">
+            <a href="https://www.redbubble.com/people/PXLHDVP/shop" class="social-link" target="_blank" rel="noopener" title="Redbubble Store">🛍️</a>
+            <a href="https://au.pinterest.com/PXLHDVP/" class="social-link" target="_blank" rel="noopener" title="Pinterest">📌</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2025 PXLHDVP | New South Wales, <span>Australia</span></p>
+    </footer>
+</body>
+</html>
