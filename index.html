@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PXLHDVP | Sacred Geometry &amp; Cosmic Art</title>
-    <meta name="description" content="Unique designs where urban fashion intersects with sacred geometry and the boundless cosmos. Shop stickers, clothing, wall art and more.">
+    <title>PXLHDVP | Classic Gaming Nostalgia</title>
+    <meta name="description" content="Retro arcade and classic gaming inspired designs. Pixel art, 8-bit nostalgia, and synthwave aesthetics on stickers, clothing, wall art and more.">
     <link rel="canonical" href="https://pxlhdvp.com.au">
     
     <!-- Favicon -->
@@ -12,73 +12,96 @@
     <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon/PXLHDVP-favicon-64x64.png">
     <link rel="icon" type="image/png" sizes="128x128" href="/assets/favicon/PXLHDVP-favicon-128x128.png">
     <link rel="apple-touch-icon" sizes="256x256" href="/assets/favicon/PXLHDVP-favicon-256x256.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/assets/favicon/PXLHDVP-favicon-512x512.png">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="PXLHDVP | Sacred Geometry &amp; Cosmic Art">
-    <meta property="og:description" content="Unique designs where urban fashion intersects with sacred geometry and the boundless cosmos.">
+    <meta property="og:title" content="PXLHDVP | Classic Gaming Nostalgia">
+    <meta property="og:description" content="Retro arcade and classic gaming inspired designs. Pixel art meets modern street style.">
     <meta property="og:image" content="https://pxlhdvp.com.au/assets/og/PXLHDVP-Logo-full-1200x630.png">
     <meta property="og:url" content="https://pxlhdvp.com.au">
     <meta property="og:type" content="website">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PXLHDVP | Sacred Geometry &amp; Cosmic Art">
-    <meta name="twitter:description" content="Unique designs where urban fashion intersects with sacred geometry and the boundless cosmos.">
+    <meta name="twitter:title" content="PXLHDVP | Classic Gaming Nostalgia">
+    <meta name="twitter:description" content="Retro arcade and classic gaming inspired designs. Pixel art meets modern street style.">
     <meta name="twitter:image" content="https://pxlhdvp.com.au/assets/og/PXLHDVP-Logo-full-1200x630.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=Space+Grotesk:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary: #7B2CBF;
-            --secondary: #E0AAFF;
-            --accent: #00F5D4;
-            --dark: #0D0221;
-            --darker: #060111;
-            --text: #E8E8E8;
-            --text-dim: #9D9D9D;
+            --cyan: #00F0FF;
+            --magenta: #FF00FF;
+            --pink: #E040FB;
+            --coral: #FF6B35;
+            --yellow: #FFD700;
+            --dark: #0a0a0f;
+            --darker: #050508;
+            --grid-color: rgba(0, 240, 255, 0.1);
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'VT323', monospace;
             background: var(--darker);
-            color: var(--text);
+            color: #fff;
             min-height: 100vh;
             overflow-x: hidden;
         }
         
-        .bg-animation {
+        /* Arcade CRT scanline effect */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 1000;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.1) 0px,
+                rgba(0, 0, 0, 0.1) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+        }
+        
+        /* Retro grid background */
+        .grid-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -2;
+            background: 
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+                linear-gradient(var(--grid-color) 1px, transparent 1px);
+            background-size: 50px 50px;
+            perspective: 500px;
+            animation: gridMove 20s linear infinite;
+        }
+        
+        @keyframes gridMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+        
+        /* Neon glow background */
+        .neon-bg {
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
             z-index: -1;
             background: 
-                radial-gradient(ellipse at 20% 80%, rgba(123, 44, 191, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 20%, rgba(0, 245, 212, 0.1) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 50%, rgba(224, 170, 255, 0.05) 0%, transparent 70%),
+                radial-gradient(ellipse at 30% 20%, rgba(255, 0, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(0, 240, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(255, 107, 53, 0.05) 0%, transparent 60%),
                 var(--darker);
         }
         
-        .stars {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: -1;
-            background-image: 
-                radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
-                radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.2), transparent),
-                radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.4), transparent),
-                radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.2), transparent),
-                radial-gradient(1px 1px at 160px 120px, rgba(255,255,255,0.3), transparent);
-            background-size: 200px 200px;
-            animation: twinkle 4s ease-in-out infinite;
-        }
-        
-        @keyframes twinkle { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
-        
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -87,209 +110,375 @@
             align-items: center;
             text-align: center;
             padding: 40px 20px;
+            position: relative;
         }
         
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: clamp(3rem, 12vw, 8rem);
-            font-weight: 900;
-            letter-spacing: 0.2em;
-            background: linear-gradient(135deg, var(--secondary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 20px;
-            animation: glow 3s ease-in-out infinite alternate;
+        .hero-logo {
+            max-width: 600px;
+            width: 90%;
+            height: auto;
+            margin-bottom: 40px;
+            animation: glitch 3s infinite;
+            filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.5))
+                    drop-shadow(0 0 60px rgba(255, 0, 255, 0.3));
         }
         
-        @keyframes glow {
-            from { filter: drop-shadow(0 0 20px rgba(123, 44, 191, 0.5)); }
-            to { filter: drop-shadow(0 0 40px rgba(0, 245, 212, 0.5)); }
+        @keyframes glitch {
+            0%, 90%, 100% { 
+                transform: translate(0); 
+                filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.5))
+                        drop-shadow(0 0 60px rgba(255, 0, 255, 0.3));
+            }
+            92% { 
+                transform: translate(-2px, 1px); 
+                filter: drop-shadow(3px 0 rgba(255, 0, 255, 0.7))
+                        drop-shadow(-3px 0 rgba(0, 240, 255, 0.7));
+            }
+            94% { 
+                transform: translate(2px, -1px); 
+                filter: drop-shadow(-3px 0 rgba(255, 0, 255, 0.7))
+                        drop-shadow(3px 0 rgba(0, 240, 255, 0.7));
+            }
+            96% { 
+                transform: translate(-1px, 2px); 
+            }
         }
         
         .tagline {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            color: var(--text-dim);
-            max-width: 600px;
-            line-height: 1.6;
+            font-family: 'VT323', monospace;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--yellow);
+            letter-spacing: 0.2em;
             margin-bottom: 50px;
+            text-shadow: 0 0 10px var(--yellow),
+                         0 0 20px var(--coral);
         }
         
-        .tagline span { color: var(--accent); }
-        
-        .geometry { position: absolute; opacity: 0.1; pointer-events: none; }
-        
-        .geometry-1 {
-            top: 10%; left: 5%;
-            width: 200px; height: 200px;
-            border: 2px solid var(--secondary);
-            border-radius: 50%;
-            animation: rotate 20s linear infinite;
-        }
-        
-        .geometry-2 {
-            bottom: 15%; right: 10%;
-            width: 150px; height: 150px;
-            border: 2px solid var(--accent);
-            transform: rotate(45deg);
-            animation: rotate 15s linear infinite reverse;
-        }
-        
-        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        
+        /* CTA Buttons */
         .cta-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 25px;
             justify-content: center;
         }
         
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 18px 40px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
+            gap: 12px;
+            padding: 18px 35px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.75rem;
             text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
+            border-radius: 0;
+            transition: all 0.2s ease;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 4px; left: 4px;
+            right: -4px; bottom: -4px;
+            z-index: -1;
+            transition: all 0.2s ease;
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), #9D4EDD);
+            background: linear-gradient(135deg, var(--magenta), var(--coral));
             color: white;
-            border: none;
-            box-shadow: 0 10px 40px rgba(123, 44, 191, 0.4);
+            border: 3px solid var(--cyan);
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.4),
+                        inset 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-primary::before {
+            background: var(--cyan);
         }
         
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 50px rgba(123, 44, 191, 0.6);
+            transform: translate(-2px, -2px);
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.6),
+                        0 0 60px rgba(0, 240, 255, 0.3);
+        }
+        
+        .btn-primary:hover::before {
+            top: 6px; left: 6px;
         }
         
         .btn-secondary {
             background: transparent;
-            color: var(--accent);
-            border: 2px solid var(--accent);
+            color: var(--cyan);
+            border: 3px solid var(--cyan);
+        }
+        
+        .btn-secondary::before {
+            background: var(--magenta);
         }
         
         .btn-secondary:hover {
-            background: var(--accent);
+            background: var(--cyan);
             color: var(--darker);
-            transform: translateY(-3px);
+            transform: translate(-2px, -2px);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.6);
         }
         
-        .features { padding: 80px 20px; text-align: center; }
+        .btn-secondary:hover::before {
+            top: 6px; left: 6px;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 20px;
+            position: relative;
+        }
+        
+        .features::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--cyan), var(--magenta), var(--cyan), transparent);
+        }
+        
+        .section-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            text-align: center;
+            color: var(--yellow);
+            margin-bottom: 60px;
+            text-shadow: 0 0 10px var(--yellow);
+            letter-spacing: 0.1em;
+        }
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         
         .feature {
-            padding: 30px;
-            background: rgba(123, 44, 191, 0.1);
-            border: 1px solid rgba(224, 170, 255, 0.1);
-            border-radius: 20px;
-            transition: transform 0.3s ease;
+            padding: 35px 25px;
+            background: rgba(10, 10, 15, 0.8);
+            border: 2px solid var(--cyan);
+            position: relative;
+            transition: all 0.3s ease;
         }
         
-        .feature:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .feature-icon { font-size: 2.5rem; margin-bottom: 15px; }
-        .feature h3 { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; color: var(--secondary); margin-bottom: 10px; }
-        .feature p { color: var(--text-dim); font-size: 0.95rem; line-height: 1.5; }
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px;
+            right: -2px; bottom: -2px;
+            background: linear-gradient(135deg, var(--cyan), var(--magenta));
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
         
-        .social { padding: 60px 20px; text-align: center; }
-        .social-title { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: var(--text-dim); margin-bottom: 30px; letter-spacing: 0.2em; }
-        .social-links { display: flex; justify-content: center; gap: 30px; }
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 240, 255, 0.2),
+                        0 0 20px rgba(255, 0, 255, 0.1);
+        }
+        
+        .feature:hover::before {
+            opacity: 1;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .feature h3 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.8rem;
+            color: var(--cyan);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .feature p {
+            font-family: 'VT323', monospace;
+            color: #ccc;
+            font-size: 1.3rem;
+            line-height: 1.5;
+        }
+        
+        /* Social Section */
+        .social {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .social-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.9rem;
+            color: var(--magenta);
+            margin-bottom: 40px;
+            letter-spacing: 0.3em;
+            text-shadow: 0 0 10px var(--magenta);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
         
         .social-link {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 60px; height: 60px;
-            border: 2px solid rgba(224, 170, 255, 0.3);
-            border-radius: 50%;
-            color: var(--secondary);
-            font-size: 1.5rem;
+            width: 70px; height: 70px;
+            border: 3px solid var(--cyan);
+            color: var(--cyan);
+            font-size: 1.8rem;
             text-decoration: none;
             transition: all 0.3s ease;
+            position: relative;
         }
         
-        .social-link:hover { border-color: var(--accent); color: var(--accent); transform: scale(1.1); }
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 4px; left: 4px;
+            right: -4px; bottom: -4px;
+            background: var(--magenta);
+            z-index: -1;
+            transition: all 0.2s ease;
+        }
         
-        footer { padding: 40px 20px; text-align: center; border-top: 1px solid rgba(224, 170, 255, 0.1); }
-        footer p { color: var(--text-dim); font-size: 0.9rem; }
-        footer span { color: var(--accent); }
+        .social-link:hover {
+            background: var(--cyan);
+            color: var(--darker);
+            transform: translate(-2px, -2px);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+        }
         
+        .social-link:hover::before {
+            top: 6px; left: 6px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 2px solid var(--grid-color);
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--magenta), transparent);
+        }
+        
+        footer p {
+            font-family: 'VT323', monospace;
+            color: #888;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+        }
+        
+        footer span {
+            color: var(--yellow);
+        }
+        
+        /* Pixel art decorations */
+        .pixel-ghost {
+            position: absolute;
+            opacity: 0.1;
+            pointer-events: none;
+            font-size: 8rem;
+        }
+        
+        .pixel-ghost-1 { top: 10%; left: 5%; animation: float 6s ease-in-out infinite; }
+        .pixel-ghost-2 { bottom: 20%; right: 8%; animation: float 8s ease-in-out infinite reverse; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        /* Responsive */
         @media (max-width: 600px) {
+            .hero-logo { max-width: 320px; }
             .cta-group { flex-direction: column; align-items: center; }
-            .btn { width: 100%; max-width: 300px; justify-content: center; }
-            .social-links { gap: 15px; }
-            .social-link { width: 50px; height: 50px; }
+            .btn { width: 100%; max-width: 280px; justify-content: center; font-size: 0.65rem; }
+            .social-link { width: 60px; height: 60px; }
+            .section-title { font-size: 0.85rem; }
+            .feature h3 { font-size: 0.7rem; }
         }
     </style>
 </head>
 <body>
-    <div class="bg-animation"></div>
-    <div class="stars"></div>
-    <div class="geometry geometry-1"></div>
-    <div class="geometry geometry-2"></div>
+    <div class="scanlines"></div>
+    <div class="grid-bg"></div>
+    <div class="neon-bg"></div>
+    
+    <div class="pixel-ghost pixel-ghost-1">👾</div>
+    <div class="pixel-ghost pixel-ghost-2">👻</div>
     
     <section class="hero">
-        <h1 class="logo">PXLHDVP</h1>
-        <p class="tagline">
-            Where <span>urban fashion</span> intersects with the mysteries of 
-            <span>sacred geometry</span> and the boundless <span>cosmos</span>.
-        </p>
+        <img src="/assets/hero/PXLHDVP-Logo-full-2400.png" alt="PXLHDVP - Classic Gaming Nostalgia" class="hero-logo">
+        <p class="tagline">PRESS START TO SHOP</p>
         <div class="cta-group">
-            <a href="https://www.redbubble.com/people/PXLHDVP/shop" class="btn btn-primary" target="_blank" rel="noopener">🛒 Shop Designs</a>
-            <a href="https://au.pinterest.com/PXLHDVP/" class="btn btn-secondary" target="_blank" rel="noopener">📌 Pinterest</a>
+            <a href="https://www.redbubble.com/people/PXLHDVP/shop" class="btn btn-primary" target="_blank" rel="noopener">🕹️ SHOP DESIGNS</a>
+            <a href="https://au.pinterest.com/PXLHDVP/" class="btn btn-secondary" target="_blank" rel="noopener">📌 PINTEREST</a>
         </div>
     </section>
     
     <section class="features">
+        <h2 class="section-title">[ SELECT YOUR POWER-UP ]</h2>
         <div class="features-grid">
             <div class="feature">
-                <div class="feature-icon">🌌</div>
-                <h3>Cosmic Themes</h3>
-                <p>Black holes, nebulae, and celestial wonders brought to life in wearable art.</p>
+                <span class="feature-icon">👾</span>
+                <h3>PIXEL ART</h3>
+                <p>8-bit sprites and retro game graphics brought to life on modern merch.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">⬡</div>
-                <h3>Sacred Geometry</h3>
-                <p>Ancient patterns and mathematical beauty woven into modern designs.</p>
+                <span class="feature-icon">🕹️</span>
+                <h3>ARCADE VIBES</h3>
+                <p>Classic cabinet aesthetics and neon glow for the true gaming fan.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">🕹️</div>
-                <h3>Retro Arcade</h3>
-                <p>Nostalgic pixel art meets contemporary urban street style.</p>
+                <span class="feature-icon">🎮</span>
+                <h3>CONTROLLER CULTURE</h3>
+                <p>Celebrate gaming history from Atari to modern consoles.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">🎨</div>
-                <h3>55+ Designs</h3>
+                <span class="feature-icon">🛍️</span>
+                <h3>55+ DESIGNS</h3>
                 <p>Stickers, clothing, phone cases, wall art, and home décor.</p>
             </div>
         </div>
     </section>
     
     <section class="social">
-        <p class="social-title">CONNECT</p>
+        <p class="social-title">[ PLAYER 2 JOIN ]</p>
         <div class="social-links">
-            <a href="https://www.redbubble.com/people/PXLHDVP/shop" class="social-link" target="_blank" rel="noopener" title="Redbubble Store">🛍️</a>
+            <a href="https://www.redbubble.com/people/PXLHDVP/shop" class="social-link" target="_blank" rel="noopener" title="Redbubble Store">🛒</a>
             <a href="https://au.pinterest.com/PXLHDVP/" class="social-link" target="_blank" rel="noopener" title="Pinterest">📌</a>
         </div>
     </section>
     
     <footer>
         <p>© 2025 PXLHDVP | New South Wales, <span>Australia</span></p>
+        <p style="margin-top: 10px; font-size: 1rem; color: #555;">INSERT COIN TO CONTINUE</p>
     </footer>
 </body>
 </html>
